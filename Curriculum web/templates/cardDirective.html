@@ -1,0 +1,51 @@
+ <!--recive un json de jsons con la siguiente forma
+
+
+{
+  "0":{
+    "title":"holinsky",
+    "img":"img/default.jpg",
+    "content":"esta madre si funciona",
+    "link":"http://www.google.com",
+    "titleLink":"linkation"
+    },
+  "1":{
+    "title":"titulo",
+    "img":"img/nature1.jpg",
+    "content":"esta madre si funciona",
+    "link":"http://www.google.com",
+    "titleLink":"BLABLABLA"
+  }
+}
+
+
+ -->
+
+
+ <div class="row" ng-repeat='card in cards track by $index'>
+  <div class="col m4" ng-if="($index%2)==0">
+  </div>
+  <div class="col s12 m8">
+    <div class="card horizontal">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="{{card.img}}">
+        <span class="card-title">{{card.title}}</span>
+      </div>
+      <div class="card-content">
+        <p><a href="{{card.link}}">{{card.titleLink}}</a></p>
+      </div>
+      <div class="card-action">
+        lalala
+        <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Content<i class="material-icons right">close</i></span>
+        <p>{{card.content}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            

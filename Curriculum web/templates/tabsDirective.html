@@ -1,0 +1,15 @@
+<ul class="collapsible popout" data-collapsible="accordion" watch>
+    <li ng-repeat="single in manyTabs">
+        <div class="collapsible-header"><i class="{{single.icon}}"></i>{{single.title}}</div>
+        <div class="collapsible-body  blue-grey lighten-5 opacity-div">
+        	<div class="row">
+        		<div class="col s3 m4" ng-if='single.img'>
+	        		<img class="activator" src="{{single.img}}" style="width:100%">
+	        	</div>
+        		<div class="col s9 m8">
+	        		<span class="text-black">{{single.content}}</span>
+	        	</div>
+        	</div>
+        </div>
+    </li>
+</ul>
