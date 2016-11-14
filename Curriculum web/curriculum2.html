@@ -39,11 +39,11 @@
     margin-left: initial;
 	}
 	p{
-		font-size: 8pt
+		font-size: 9pt
 	}
 	li{
 		padding-left: 5px;
-		font-size: 8pt
+		font-size: 9pt
 	}
 	.m2{
 		background-color: #D8D8D8;
@@ -120,57 +120,23 @@
 		<div class="col m6">
 			<h6><b>Experience</b> </h6>
 			<hr>
-			<p>
-				<h6>Team Leader (web devevelopment team - INEGI) 
-					<p><small>October 2015 - Date</small></p>
-				</h6>
-			</p>
-			<p>
-				Managing and coordination of the partners and working groups engaged in project work. Deal with the customers the best solution for their problem.
-			</p>
-			<hr>
-			<p>
-				<h6>Web inventatiodeveloper (INEGI)
-					<p><small>April 2015 - Date</small></p>
-				</h6>
-			</p>
-			<p>
-				Building many kind of applications like ETL (DB Load Automation), Report applications, Inventory control, etc...
-				<p>
-				experience gained on:
-				</p>
-				<p>
-				.Net, HTML, CSS, Bootstrap, Materialize, JS, JQuery, AngularJs, fusionChartsJs,PHP (slim micro-framework, Larabel), SQL Server (development and maintenance of procedures, functions, etc), beginning with Ruby and Rails</p>
-			</p>
-			<hr>
-			<p>
-				<h6>Diferent projects (external clients)
-					<p><small>January 2013 - Date</small></p>
-				</h6>
-			</p>
-			<p>
-				build some business web solutions from different clients:
-					<ul>
-						<li>
-							Web page and admin tool (currently)
-						</li>
-						<li>
-							Billing Sistems
-						</li>
-						<li>
-							POS (Point of sales)
-						</li>
-					</ul>
-			</p>
-			<hr>
-			<p>
-				<h6>Application Support Technician (Softtek)
-					<p><small>January 2014 - April 2015</small></p>
-				</h6>
-			</p>
-			<p>
-				Support to different instances of business applications, ticket resolution
-			</p>
+			<ul>
+				<li ng-repeat='e in experience'>
+
+					<p>
+						<h6>{{e.title}} 
+							<p><small>{{e.interval}}</small></p>
+						</h6>
+					</p>
+					<p>
+						{{e.description}}
+						<p></p>
+						<label ng-repeat='t in e.subTopics'>{{t}}, </label>
+					</p>
+					<hr>
+				</li>
+			</ul>
+
 		</div>
 	</div>
 
